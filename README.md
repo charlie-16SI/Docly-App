@@ -39,3 +39,50 @@ Docly-App/
     ├── routes/
     ├── .env.example
     └── package.json
+⚙️ Panduan Instalasi & Cara Menjalankan
+1. Prasyarat
+Node.js (Versi 16 LTS ke atas)
+
+MongoDB (Lokal atau MongoDB Atlas)
+
+2. Setup Backend (Server)
+Buka terminal dan masuk ke folder server:
+
+Bash
+cd server
+Instal dependensi:
+
+Bash
+npm install
+Buat file .env baru berdasarkan .env.example:
+
+Code snippet
+PORT=5000
+MONGO_URI=mongodb://localhost:27017/docly_db
+JWT_SECRET=rahasia_jwt_key_super_aman_123
+JWT_EXPIRES_IN=7d
+CLIENT_URL=http://localhost:5173
+Jalankan server backend:
+
+Bash
+npm run dev
+# Atau
+node server.js
+3. Setup Frontend (Client)
+Buka terminal baru dan masuk ke folder client:
+
+Bash
+cd client
+Instal dependensi:
+
+Bash
+npm install
+Buat file .env baru berdasarkan .env.example:
+
+Code snippet
+VITE_API_BASE_URL=http://localhost:5000/api
+Jalankan aplikasi frontend:
+
+Bash
+npm run dev
+Buka link http://localhost:5173 di browser.
